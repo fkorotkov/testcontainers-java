@@ -1,7 +1,8 @@
 macOS_task:
   osx_instance:
     image: mojave-base
-  install_script: brew cask install java docker
+  install_docker_script: brew cask install docker
   start_docker_script: sudo open /Applications/Docker.app
+  install_java_script: brew cask install java
   check_script: ./gradlew testcontainers:check javadoc --scan --no-daemon
 
