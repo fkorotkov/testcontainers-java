@@ -1,9 +1,8 @@
 macOS_task:
   osx_instance:
     image: mojave-base
-  cpu_script: sysctl -a | grep machdep.cpu.features
   install_docker_script: brew cask install docker
-  start_docker_script: sudo /Applications/Docker.app/Contents/MacOS/Docker --unattended
+  start_docker_background_script: sudo /Applications/Docker.app/Contents/MacOS/Docker --unattended
   install_java_script: brew cask install java
   check_script: ./gradlew testcontainers:check javadoc --scan --no-daemon
 
