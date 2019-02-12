@@ -1,0 +1,4 @@
+macOS_task:
+  osx_instance:
+    image: mojave-docker
+  check_script: ./gradlew testcontainers:check javadoc --scan --no-daemon
