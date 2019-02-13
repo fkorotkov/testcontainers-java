@@ -1,6 +1,9 @@
 macOS_task:
   osx_instance:
     image: mojave-docker
-  dockerd_script: dockerd
+  dockerd_script: 
+    - docker --version
+    - docker ps
+    - docker run alpine:latest ls
   check_script: ./gradlew testcontainers:check javadoc --scan --no-daemon
 
