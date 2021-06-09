@@ -143,7 +143,7 @@ if (!org.gradle.internal.os.OperatingSystem.current().isWindows()) {
 configurations.all {
     resolutionStrategy {
         // use lower Jackson version
-        force 'com.fasterxml.jackson.core:jackson-databind:2.8.8'
+        force 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
     }
 }
 
